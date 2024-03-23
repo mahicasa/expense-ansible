@@ -1,0 +1,16 @@
+
+
+
+
+- name: Setup MySQL Setup
+  hosts: all
+  become: true
+  tasks:
+    - name: Disable the MYSQL Default version
+      ansible.builtin.shell: somescript.sh >> somelog.txt
+        name: nginx
+        state: installed
+    - name: Copy Expense Config File
+      ansible.builtin.copy:
+        src: expense.conf
+        dest: /etc/nginx/default.d/expense.conf
