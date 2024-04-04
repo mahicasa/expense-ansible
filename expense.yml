@@ -1,5 +1,5 @@
-- name: Setup Backend configuration
+- name: Expense Project Setup
   hosts: all
-  become: true
+  become: yes
   roles:
-    - backend
+    - "{{ service_name }}"
